@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:59:47 by rorollin          #+#    #+#             */
-/*   Updated: 2025/01/29 19:14:52 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/02/04 11:38:51 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,14 +64,12 @@ size_t	ft_strlen(char *str, char c)
 	return (i);
 }
 
-char	*ft_n_substr(char *s, size_t n)
+char	*ft_sub_n_str(char *s, size_t n)
 {
 	char	*new_string;
 	size_t	max_mem;
 
 	new_string = NULL;
-	if (s == NULL || s[0] == '\0')
-		return (NULL);
 	max_mem = ft_strlen(s, '\n');
 	if (max_mem == 0 || n == 0)
 		return (NULL);

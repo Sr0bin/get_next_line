@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:59:46 by rorollin          #+#    #+#             */
-/*   Updated: 2025/01/29 19:13:58 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/02/04 11:42:29 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 size_t	ft_strlen(char *str, char c);
 void	*ft_calloc(size_t nmemb, size_t size);
-char	*ft_n_substr(char *s, size_t n);
+char	*ft_sub_n_str(char *s, size_t n);
 char	*ft_strjoin(char **s1, char **s2);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*get_next_line(int fd);
