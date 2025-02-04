@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:59:47 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/04 11:36:03 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/02/04 11:52:14 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (result);
 }
 
-size_t	ft_strlen(char *str, char c)
+size_t	ft_strlen_c(char *str, char c)
 {
 	size_t	i;
 
@@ -70,7 +70,7 @@ char	*ft_sub_n_str(char *s, size_t n)
 	size_t	max_mem;
 
 	new_string = NULL;
-	max_mem = ft_strlen(s, '\n');
+	max_mem = ft_strlen_c(s, '\n');
 	if (max_mem == 0 || n == 0)
 		return (NULL);
 	if (max_mem > n)
@@ -94,8 +94,8 @@ char	*ft_strjoin(char **s1, char **s2)
 		return (*s2);
 	if (*s2 == NULL)
 		return (*s1);
-	len_s1 = ft_strlen(*s1, '\n');
-	len_s2 = ft_strlen(*s2, '\n');
+	len_s1 = ft_strlen_c(*s1, '\n');
+	len_s2 = ft_strlen_c(*s2, '\n');
 	new_string = ft_calloc((len_s1 + len_s2 + 1), sizeof(char));
 	if (new_string == NULL)
 	{

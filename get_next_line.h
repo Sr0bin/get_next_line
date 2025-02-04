@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:59:46 by rorollin          #+#    #+#             */
-/*   Updated: 2025/01/30 11:31:29 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/02/04 11:52:16 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <limits.h>
 # include <stdlib.h>
 
-size_t	ft_strlen(char *str, char c);
+size_t	ft_strlen_c(char *str, char c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_sub_n_str(char *s, size_t n);
 char	*ft_strjoin(char **s1, char **s2);

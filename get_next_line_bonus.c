@@ -60,17 +60,17 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (reset_buffer(buffer[fd], BUFFER_SIZE));
 	bytes_read = 1;
-	output = ft_sub_n_str(buffer[fd], ft_strlen(buffer[fd], '\n'));
-	reset_buffer(buffer[fd], ft_strlen(buffer[fd], '\n'));
+	output = ft_sub_n_str(buffer[fd], ft_strlen_c(buffer[fd], '\n'));
+	reset_buffer(buffer[fd], ft_strlen_c(buffer[fd], '\n'));
 	while (bytes_read > 0 && !contain_nl(output))
 	{
 		bytes_read = read(fd, buffer[fd], BUFFER_SIZE);
 		if (bytes_read < 0)
 			return (clean_exit(&output, &temp, (char *) buffer));
 		temp = ft_sub_n_str(buffer[fd], bytes_read);
-		if (temp == NULL && ft_strlen(buffer[fd], '\n') != 0)
+		if (temp == NULL && ft_strlen_c(buffer[fd], '\n') != 0)
 			return (clean_exit(&output, &temp, (char *) buffer));
-		reset_buffer(buffer[fd], ft_strlen(temp, '\n'));
+		reset_buffer(buffer[fd], ft_strlen_c(temp, '\n'));
 		output = ft_strjoin(&output, &temp);
 	}
 	return (output);
